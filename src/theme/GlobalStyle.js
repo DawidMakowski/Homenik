@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
     *, *::before, *::after {
     box-sizing: border-box;
+    color: ${({ theme }) => theme.black};
     }
 
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
@@ -14,7 +15,6 @@ const GlobalStyle = createGlobalStyle`
     body{
         font-family: 'Roboto', sans-serif;
         font-size: 1.6rem;
-        color: #20242D;
         background-color: #F5F9FF;
     }
 
