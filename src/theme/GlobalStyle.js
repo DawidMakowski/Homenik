@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Roboto', sans-serif;
         font-size: 1.6rem;
         color: #20242D;
+        background-color: #F5F9FF;
     }
 
 `;
