@@ -10,7 +10,6 @@ const ModuleWrapper = styled.div`
   padding: 24px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
 `;
 
@@ -27,5 +26,5 @@ Module.propTypes = {
   width: PropTypes.string.isRequired,
   height: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  children: PropTypes.arrayOf(PropTypes.element).isRequired,
+  children: PropTypes.node.isRequired,
 };
