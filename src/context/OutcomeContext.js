@@ -4,17 +4,17 @@ import PropTypes from 'prop-types';
 const dummy = [
   {
     title: 'Zakupy',
-    value: '50zł',
+    value: '50 zł',
     id: 1234956,
   },
   {
     title: 'Zakupy',
-    value: '50zł',
+    value: '50 zł',
     id: 1923456,
   },
   {
     title: 'Zakupy',
-    value: '50zł',
+    value: '50 zł',
     id: 1239456,
   },
 ];

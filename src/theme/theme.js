@@ -1,7 +1,7 @@
 export const theme = {
   colors: {
     white: '#faf5f5',
-    black: '#363131',
+    black: '#20242D',
     main: '#777DA7',
     warn: '#D5573B',
     ok: '#94C9A9',
@@ -9,8 +9,10 @@ export const theme = {
   fs: {
     small: '12px',
     normal: '16px',
+    medium: '24px',
     big: '32px',
     large: '48px',
+    xl: '64px',
   },
   medias: {
     mobile: `only screen and (max-width: 480px)`,
