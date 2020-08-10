@@ -23,6 +23,9 @@ const StyledListItem = styled.li`
   justify-content: space-between;
   align-items: center;
 `;
+const StyledParagraph = styled(Paragraph)`
+  margin-top: 2rem;
+`;
 
 function OutcomesList() {
   const { outcomes, removeOutcome } = useContext(OutcomeContext);
@@ -30,15 +33,19 @@ function OutcomesList() {
   return (
     <StyledWrapper>
       <Heading>Wydatki w tym miesiącu</Heading>
-      <StyledList>
-        {outcomes.map((outcome) => (
-          <StyledListItem>
-            <Icon onClick={() => removeOutcome(outcome.id)} />
-            <Paragraph>{outcome.title}</Paragraph>
-            <Paragraph>{outcome.value}</Paragraph>
-          </StyledListItem>
-        ))}
-      </StyledList>
+      {outcomes.length === 0 ? (
+        <StyledParagraph>Dodaj swoje wydatki</StyledParagraph>
+      ) : (
+        <StyledList>
+          {outcomes.map((outcome) => (
+            <StyledListItem key={outcome.id}>
+              <Icon onClick={() => removeOutcome(outcome.id)} />
+              <Paragraph>{outcome.title}</Paragraph>
+              <Paragraph>{outcome.value}</Paragraph>
+            </StyledListItem>
+          ))}
+        </StyledList>
+      )}
     </StyledWrapper>
   );
 }

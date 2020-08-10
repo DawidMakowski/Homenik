@@ -28,9 +28,6 @@ dl,
 dd {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-}
-
-body{
   background-color: #F5F9FF;
 }
 `;
