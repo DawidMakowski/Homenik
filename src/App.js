@@ -1,8 +1,8 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import Router from './views/Router';
 import GlobalStyles from './theme/globalstyles';
 import { theme } from './theme/theme';
-import OutcomesList from './components/OutcomesList/OutcomesList';
 import OutcomeContextProvider from './context/OutcomeContext';
 import IncomeContextProvider from './context/IncomeContext';
 
@@ -12,7 +12,7 @@ const App = () => (
     <IncomeContextProvider>
       <OutcomeContextProvider>
         <ThemeProvider theme={theme}>
-          <OutcomesList />
+          <Router />
         </ThemeProvider>
       </OutcomeContextProvider>
     </IncomeContextProvider>
