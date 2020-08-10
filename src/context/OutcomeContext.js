@@ -5,17 +5,17 @@ const dummy = [
   {
     title: 'Zakupy',
     value: '50 zł',
-    id: 1234956,
+    id: 12343956,
   },
   {
     title: 'Zakupy',
     value: '50 zł',
-    id: 1923456,
+    id: 19231456,
   },
   {
     title: 'Zakupy',
     value: '50 zł',
-    id: 1239456,
+    id: 12396456,
   },
 ];
 
