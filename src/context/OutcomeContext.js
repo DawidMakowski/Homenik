@@ -1,21 +1,26 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+const randomDate = new Date(0);
+
 const dummy = [
   {
     title: 'Zakupy',
-    value: '50 zł',
+    cost: 50,
     id: 12343956,
+    date: randomDate,
   },
   {
     title: 'Zakupy',
-    value: '50 zł',
+    cost: 50,
     id: 19231456,
+    date: randomDate,
   },
   {
     title: 'Zakupy',
-    value: '50 zł',
+    cost: 50,
     id: 12396456,
+    date: randomDate,
   },
 ];
 

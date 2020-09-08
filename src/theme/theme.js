@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 export const theme = {
   colors: {
     white: '#F5F9FF',

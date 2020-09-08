@@ -1,47 +1,28 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
 import Heading from '../Heading/Heading';
-import Icon from '../Icon/Icon';
-import Paragraph from '../Paragraph/Paragraph';
+import Close from '../Icon/Close';
 import { OutcomeContext } from '../../context/OutcomeContext';
-
-const StyledWrapper = styled.div`
-  width: 300px;
-  padding: 1em;
-  border: solid 5px ${({ theme }) => theme.colors.black};
-  text-align: center;
-  color: ${({ theme }) => theme.colors.black};
-`;
-
-const StyledList = styled.ul`
-  margin: 2em auto auto 0;
-`;
-const StyledListItem = styled.li`
-  width: 100%;
-  margin-bottom: 2em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-const StyledParagraph = styled(Paragraph)`
-  margin-top: 2rem;
-`;
+import Paragraph from '../Paragraph/Paragraph';
+import { StyledWrapper, StyledList, StyledListItem, StyledParagraph } from './OutcomesListStyles';
+import { useCurrentMonthOutcomes } from '../../hooks/useCurrentMonthOutcomes';
 
 function OutcomesList() {
-  const { outcomes, removeOutcome } = useContext(OutcomeContext);
+  const { removeOutcome } = useContext(OutcomeContext);
+
+  const currentMonthOutcomes = useCurrentMonthOutcomes();
 
   return (
     <StyledWrapper>
       <Heading>Wydatki w tym miesiącu</Heading>
-      {outcomes.length === 0 ? (
-        <StyledParagraph>Dodaj swoje wydatki</StyledParagraph>
+      {currentMonthOutcomes.length === 0 ? (
+        <StyledParagraph>Brak wydatków w tym miesiącu</StyledParagraph>
       ) : (
         <StyledList>
-          {outcomes.map((outcome) => (
+          {currentMonthOutcomes.map((outcome) => (
             <StyledListItem key={outcome.id}>
-              <Icon onClick={() => removeOutcome(outcome.id)} />
+              <Close onClick={() => removeOutcome(outcome.id)} />
               <Paragraph>{outcome.title}</Paragraph>
-              <Paragraph>{outcome.value}</Paragraph>
+              <Paragraph>{outcome.cost}</Paragraph>
             </StyledListItem>
           ))}
         </StyledList>
